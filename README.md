@@ -19,8 +19,6 @@ Thiết kế hiện đại, responsive, hỗ trợ truy cập trên mọi thiế
 
 ## 📁 Cấu trúc thư mục
 ```DNTU-Buddies-Website/
-```
-```
 ├── index.html # Trang chủ
 ├── login.html # Trang đăng nhập
 ├── register.html # Trang đăng ký
@@ -93,7 +91,5 @@ Quản lý thành viên: /members.html
 Thêm thành viên: /add-member.html
 
 ```Demo Account
-```
-```
 Email: test@dntu.edu.vn
 Password: password123

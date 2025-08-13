@@ -18,8 +18,8 @@ Thiết kế hiện đại, responsive, hỗ trợ truy cập trên mọi thiế
 ---
 
 ## 📁 Cấu trúc thư mục
-
-DNTU-Buddies-Website/
+```
+```DNTU-Buddies-Website/
 ├── index.html # Trang chủ
 ├── login.html # Trang đăng nhập
 ├── register.html # Trang đăng ký
@@ -34,11 +34,7 @@ DNTU-Buddies-Website/
 ├── members.js # JS cho quản lý thành viên
 ├── add-member.js # JS cho form thêm thành viên
 └── README.md # Tài liệu hướng dẫn
-
-markdown
-Sao chép
-Chỉnh sửa
-
+```
 ---
 
 ## 🛠 Cài đặt & Triển khai trên GitHub Pages
@@ -59,12 +55,11 @@ Chỉnh sửa
 - Commit với nội dung: `Initial website files`
 
 #### Cách 2: Dùng Git CLI
-```bash
-# Clone repository
+```# Clone repository
 git clone https://github.com/[USERNAME]/dntu-buddies-website.git
 cd dntu-buddies-website
-
-# Copy toàn bộ file vào thư mục này
+```
+```# Copy toàn bộ file vào thư mục này
 git add .
 git commit -m "Initial website files"
 git push origin main
@@ -79,10 +74,9 @@ Nhấn Save
 
 Chờ vài phút, website sẽ xuất hiện tại:
 
-arduino
-Sao chép
-Chỉnh sửa
-https://[USERNAME].github.io/dntu-buddies-website/
+```
+```https://[USERNAME].github.io/dntu-buddies-website/
+```
 📱 Hướng dẫn sử dụng
 Đăng ký tài khoản: /register.html
 
@@ -95,11 +89,9 @@ Mã sinh viên: 10 chữ số
 Quản lý thành viên: /members.html
 
 Thêm thành viên: /add-member.html
+```
+```Demo Account
+```
 
-Demo Account
-
-makefile
-Sao chép
-Chỉnh sửa
 Email: test@dntu.edu.vn
 Password: password123

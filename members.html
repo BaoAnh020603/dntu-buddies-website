@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách thành viên - DNTU Buddies Team</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="members.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <img src="https://via.placeholder.com/50x50/4a90e2/ffffff?text=DB" alt="DNTU Buddies Logo" class="logo">
+                    <span class="brand-text">DNTU Buddies</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+                    <li><a href="index.html#about" class="nav-link">Giới thiệu</a></li>
+                    <li><a href="index.html#news" class="nav-link">Bảng tin</a></li>
+                    <li><a href="members.html" class="nav-link active">Thành viên</a></li>
+                    <li><a href="index.html#activities" class="nav-link">Hoạt động</a></li>
+                </ul>
+                <div class="nav-auth">
+                    <a href="add-member.html" class="btn btn-primary">
+                        <i class="fas fa-plus"></i>
+                        Thêm thành viên
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Members Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <nav class="breadcrumb">
+                    <a href="index.html">Trang chủ</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Thành viên</span>
+                </nav>
+                <h1 class="page-title">Danh sách thành viên</h1>
+                <p class="page-subtitle">Khám phá đội ngũ thành viên tài năng và nhiệt huyết của DNTU Buddies Team</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members Filter & Search -->
+    <section class="members-controls">
+        <div class="container">
+            <div class="controls-wrapper">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="memberSearch" placeholder="Tìm kiếm thành viên...">
+                </div>
+                
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="facultyFilter">Khoa:</label>
+                        <select id="facultyFilter">
+                            <option value="">Tất cả</option>
+                            <option value="cntt">Công nghệ thông tin</option>
+                            <option value="ngoaingu">Ngoại ngữ</option>
+                            <option value="kinhtequocte">Kinh tế quốc tế</option>
+                            <option value="quantrikiemtoan">Quản trị - Kiểm toán</option>
+                            <option value="cokhi">Cơ khí</option>
+                            <option value="xaydung">Xây dựng</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="roleFilter">Vai trò:</label>
+                        <select id="roleFilter">
+                            <option value="">Tất cả</option>
+                            <option value="chutichu">Chủ tịch</option>
+                            <option value="phochutichu">Phó chủ tịch</option>
+                            <option value="thuky">Thư ký</option>
+                            <option value="thutruong">Thủ trưởng</option>
+                            <option value="thanhvien">Thành viên</option>
+                        </select>
+                    </div>
+                    
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button class="view-btn" data-view="list">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members List -->
+    <section class="members-section">
+        <div class="container">
+            <div class="members-stats">
+                <div class="stat-card">
+                    <div class="stat-number">45</div>
+                    <div class="stat-label">Tổng thành viên</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">38</div>
+                    <div class="stat-label">Đang hoạt động</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Ban chủ nhiệm</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Khoa tham gia</div>
+                </div>
+            </div>
+
+            <div class="members-grid" id="membersContainer">
+                <!-- Member Card 1 -->
+                <div class="member-card" data-faculty="cntt" data-role="chutichu">
+                    <div class="member-header">
+                        <div class="member-avatar">
+                            <img src="https://via.placeholder.com/120x120/4a90e2/ffffff?text=NVA" alt="Nguyễn Văn A">
+                            <div class="member-status online"></div>
+                        </div>
+                        <div class="member-badge president">Chủ tịch</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Nguyễn Văn A</h3>
+                        <p class="member-id">MSSV: 2021001234</p>
+                        <p class="member-faculty">Công nghệ thông tin</p>
+                        <p class="member-year">Năm 3</p>
+                        <p class="member-description">Chuyên về phát triển web và ứng dụng di động. Có kinh nghiệm tổ chức sự kiện và quản lý nhóm.</p>
+                    </div>
+                    <div class="member-skills">
+                        <span class="skill-tag">Leadership</span>
+                        <span class="skill-tag">Web Development</span>
+                        <span class="skill-tag">English</span>
+                    </div>
+                    <div class="member-actions">
+                        <button class="action-btn view-profile" title="Xem hồ sơ">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn send-message" title="Nhắn tin">
+                            <i class="fas fa-message"></i>
+                        </button>
+                        <button class="action-btn contact-info" title="Thông tin liên hệ">
+                            <i class="fas fa-phone"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Member Card 6 -->
+                <div class="member-card" data-faculty="quantrikiemtoan" data-role="thanhvien">
+                    <div class="member-header">
+                        <div class="member-avatar">
+                            <img src="https://via.placeholder.com/120x120/1abc9c/ffffff?text=NTF" alt="Nguyễn Thị F">
+                            <div class="member-status online"></div>
+                        </div>
+                        <div class="member-badge member">Thành viên</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Nguyễn Thị F</h3>
+                        <p class="member-id">MSSV: 2022003456</p>
+                        <p class="member-faculty">Quản trị - Kiểm toán</p>
+                        <p class="member-year">Năm 2</p>
+                        <p class="member-description">Có khả năng quản lý tài chính và tổ chức sự kiện. Thành thạo tiếng Anh và có kinh nghiệm làm việc nhóm.</p>
+                    </div>
+                    <div class="member-skills">
+                        <span class="skill-tag">Finance</span>
+                        <span class="skill-tag">Project Management</span>
+                        <span class="skill-tag">English</span>
+                    </div>
+                    <div class="member-actions">
+                        <button class="action-btn view-profile" title="Xem hồ sơ">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn send-message" title="Nhắn tin">
+                            <i class="fas fa-message"></i>
+                        </button>
+                        <button class="action-btn contact-info" title="Thông tin liên hệ">
+                            <i class="fas fa-phone"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="page-btn prev" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                    Trước
+                </button>
+                <div class="page-numbers">
+                    <button class="page-number active">1</button>
+                    <button class="page-number">2</button>
+                    <button class="page-number">3</button>
+                    <span class="page-dots">...</span>
+                    <button class="page-number">8</button>
+                </div>
+                <button class="page-btn next">
+                    Sau
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="https://via.placeholder.com/40x40/4a90e2/ffffff?text=DB" alt="DNTU Buddies Logo" class="footer-logo">
+                    <div>
+                        <h4>DNTU Buddies Team</h4>
+                        <p>Buddies Beyond Boundaries – Gắn kết không giới hạn!</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 DNTU Buddies Team. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="members.js"></script>
+</body>
+</html>
+                </div>
+
+                <!-- Member Card 2 -->
+                <div class="member-card" data-faculty="ngoaingu" data-role="phochutichu">
+                    <div class="member-header">
+                        <div class="member-avatar">
+                            <img src="https://via.placeholder.com/120x120/52c41a/ffffff?text=TTB" alt="Trần Thị B">
+                            <div class="member-status online"></div>
+                        </div>
+                        <div class="member-badge vice-president">Phó chủ tịch</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Trần Thị B</h3>
+                        <p class="member-id">MSSV: 2022005678</p>
+                        <p class="member-faculty">Ngoại ngữ</p>
+                        <p class="member-year">Năm 2</p>
+                        <p class="member-description">Thành thạo tiếng Anh, Nhật và Hàn Quốc. Có kinh nghiệm phiên dịch và tổ chức hoạt động quốc tế.</p>
+                    </div>
+                    <div class="member-skills">
+                        <span class="skill-tag">Translation</span>
+                        <span class="skill-tag">Japanese</span>
+                        <span class="skill-tag">Korean</span>
+                    </div>
+                    <div class="member-actions">
+                        <button class="action-btn view-profile" title="Xem hồ sơ">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn send-message" title="Nhắn tin">
+                            <i class="fas fa-message"></i>
+                        </button>
+                        <button class="action-btn contact-info" title="Thông tin liên hệ">
+                            <i class="fas fa-phone"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Member Card 3 -->
+                <div class="member-card" data-faculty="kinhtequocte" data-role="thuky">
+                    <div class="member-header">
+                        <div class="member-avatar">
+                            <img src="https://via.placeholder.com/120x120/f39c12/ffffff?text=LVC" alt="Lê Văn C">
+                            <div class="member-status offline"></div>
+                        </div>
+                        <div class="member-badge secretary">Thư ký</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Lê Văn C</h3>
+                        <p class="member-id">MSSV: 2022009876</p>
+                        <p class="member-faculty">Kinh tế quốc tế</p>
+                        <p class="member-year">Năm 2</p>
+                        <p class="member-description">Có kinh nghiệm trong việc tổ chức và quản lý tài liệu, phối hợp hoạt động giữa các bộ phận.</p>
+                    </div>
+                    <div class="member-skills">
+                        <span class="skill-tag">Organization</span>
+                        <span class="skill-tag">Documentation</span>
+                        <span class="skill-tag">Communication</span>
+                    </div>
+                    <div class="member-actions">
+                        <button class="action-btn view-profile" title="Xem hồ sơ">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn send-message" title="Nhắn tin">
+                            <i class="fas fa-message"></i>
+                        </button>
+                        <button class="action-btn contact-info" title="Thông tin liên hệ">
+                            <i class="fas fa-phone"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Member Card 4 -->
+                <div class="member-card" data-faculty="ngoaingu" data-role="thanhvien">
+                    <div class="member-header">
+                        <div class="member-avatar">
+                            <img src="https://via.placeholder.com/120x120/e74c3c/ffffff?text=PTD" alt="Phạm Thị D">
+                            <div class="member-status online"></div>
+                        </div>
+                        <div class="member-badge member">Thành viên</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Phạm Thị D</h3>
+                        <p class="member-id">MSSV: 2023001111</p>
+                        <p class="member-faculty">Ngoại ngữ</p>
+                        <p class="member-year">Năm 1</p>
+                        <p class="member-description">Sinh viên năm nhất năng động, nhiệt tình tham gia các hoạt động CLB và có khả năng ngoại ngữ tốt.</p>
+                    </div>
+                    <div class="member-skills">
+                        <span class="skill-tag">English</span>
+                        <span class="skill-tag">Event Planning</span>
+                        <span class="skill-tag">Social Media</span>
+                    </div>
+                    <div class="member-actions">
+                        <button class="action-btn view-profile" title="Xem hồ sơ">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="action-btn send-message" title="Nhắn tin">
+                            <i class="fas fa-message"></i>
+                        </button>
+                        <button class="action-btn contact-info" title="Thông tin liên hệ">
+                            <i class="fas fa-phone"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Member Card 5 -->
+                <div class="member-card" data-faculty="cntt" data-role="thanhvien">
+                    <div class="member-header">
+                        <div class="member-avatar">
+                            <img src="https://via.placeholder.com/120x120/9b59b6/ffffff?text=HVE" alt="Hoàng Văn E">
+                            <div class="member-status online"></div>
+                        </div>
+                        <div class="member-badge member">Thành viên</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Hoàng Văn E</h3>
+                        <p class="member-id">MSSV: 2021002345</p>
+                        <p class="member-faculty">Công nghệ thông tin</p>
+                        <p class="member-year">Năm 3</p>
+                        <p class="member-description">Chuyên về thiết kế giao diện và trải nghiệm người dùng. Có kinh nghiệm làm việc với các dự án quốc tế.</p>
+                    </div>
+                    <div class="member-skills">
+                        <span class="skill-tag">UI/UX Design</span>
+                        <span class="skill-tag">Photoshop</span>
+                        <span class="skill-tag">Figma</span>
+                    </div>

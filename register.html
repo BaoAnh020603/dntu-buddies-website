@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký - DNTU Buddies Team</title>
+    <link rel="stylesheet" href="auth.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Về trang chủ
+                </a>
+                <div class="auth-logo">
+                    <img src="https://via.placeholder.com/60x60/4a90e2/ffffff?text=DB" alt="DNTU Buddies Logo">
+                    <h1>DNTU Buddies</h1>
+                </div>
+                <h2>Đăng ký</h2>
+                <p>Tạo tài khoản mới để tham gia cộng đồng DNTU Buddies.</p>
+            </div>
+
+            <form class="auth-form" id="registerForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">Họ</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="firstName" name="firstName" placeholder="Họ" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Tên</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="lastName" name="lastName" placeholder="Tên" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder="example@dntu.edu.vn" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentId">Mã số sinh viên</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-id-card"></i>
+                        <input type="text" id="studentId" name="studentId" placeholder="Ví dụ: 2021001234" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="faculty">Khoa</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-graduation-cap"></i>
+                        <select id="faculty" name="faculty" required>
+                            <option value="">Chọn khoa</option>
+                            <option value="cntt">Công nghệ thông tin</option>
+                            <option value="ngoaingu">Ngoại ngữ</option>
+                            <option value="kinhtequocte">Kinh tế quốc tế</option>
+                            <option value="quantrikiemtoan">Quản trị - Kiểm toán</option>
+                            <option value="cokhi">Cơ khí</option>
+                            <option value="xaydung">Xây dựng</option>
+                            <option value="other">Khác</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Số điện thoại</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="phone" name="phone" placeholder="0123456789" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Mật khẩu</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" name="password" placeholder="Tối thiểu 8 ký tự" required>
+                        <button type="button" class="toggle-password" onclick="togglePassword('password')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="password-strength">
+                        <div class="strength-bar">
+                            <div class="strength-fill"></div>
+                        </div>
+                        <span class="strength-text">Độ mạnh mật khẩu</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Xác nhận mật khẩu</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Nhập lại mật khẩu" required>
+                        <button type="button" class="toggle-password" onclick="togglePassword('confirmPassword')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" name="terms" required>
+                        <span class="checkmark"></span>
+                        Tôi đồng ý với <a href="#" target="_blank">Điều khoản sử dụng</a> và <a href="#" target="_blank">Chính sách bảo mật</a>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" name="newsletter">
+                        <span class="checkmark"></span>
+                        Nhận thông báo về các hoạt động và sự kiện mới
+                    </label>
+                </div>
+
+                <button type="submit" class="auth-btn">
+                    <i class="fas fa-user-plus"></i>
+                    Tạo tài khoản
+                </button>
+
+                <div class="auth-divider">
+                    <span>Hoặc</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn google">
+                        <i class="fab fa-google"></i>
+                        Đăng ký với Google
+                    </button>
+                    <button type="button" class="social-btn facebook">
+                        <i class="fab fa-facebook"></i>
+                        Đăng ký với Facebook
+                    </button>
+                </div>
+
+                <p class="auth-switch">
+                    Đã có tài khoản? <a href="login.html">Đăng nhập ngay</a>
+                </p>
+            </form>
+        </div>
+
+        <div class="auth-visual">
+            <div class="visual-content">
+                <h3>Tham gia cộng đồng DNTU Buddies!</h3>
+                <p>Kết nối với sinh viên quốc tế, phát triển kỹ năng và tạo nên những trải nghiệm đáng nhớ.</p>
+                <div class="visual-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Thành viên</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Sự kiện</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Quốc gia</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

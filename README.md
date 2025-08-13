@@ -7,18 +7,19 @@ Thiết kế hiện đại, responsive, hỗ trợ truy cập trên mọi thiế
 
 ## 🚀 Tính năng
 
-- ✅ **Trang chủ** đẹp mắt với thông tin CLB
-- ✅ **Hệ thống đăng nhập / đăng ký**
-- ✅ **Quản lý thành viên** (xem, thêm, sửa)
-- ✅ **Bảng tin** hiển thị tin tức mới nhất
-- ✅ **Trang hoạt động** với timeline
-- ✅ **Responsive design** - tương thích mobile
-- ✅ **Giao diện hiện đại** với animation mượt mà
+- ✅ **Trang chủ** đẹp mắt với thông tin CLB  
+- ✅ **Hệ thống đăng nhập / đăng ký**  
+- ✅ **Quản lý thành viên** (xem, thêm, sửa)  
+- ✅ **Bảng tin** hiển thị tin tức mới nhất  
+- ✅ **Trang hoạt động** với timeline  
+- ✅ **Responsive design** - tương thích mobile  
+- ✅ **Giao diện hiện đại** với animation mượt mà  
 
 ---
 
 ## 📁 Cấu trúc thư mục
-```DNTU-Buddies-Website/
+
+DNTU-Buddies-Website/
 ├── index.html # Trang chủ
 ├── login.html # Trang đăng nhập
 ├── register.html # Trang đăng ký
@@ -34,6 +35,10 @@ Thiết kế hiện đại, responsive, hỗ trợ truy cập trên mọi thiế
 ├── add-member.js # JS cho form thêm thành viên
 └── README.md # Tài liệu hướng dẫn
 
+markdown
+Sao chép
+Chỉnh sửa
+
 ---
 
 ## 🛠 Cài đặt & Triển khai trên GitHub Pages
@@ -47,6 +52,7 @@ Thiết kế hiện đại, responsive, hỗ trợ truy cập trên mọi thiế
 6. Nhấn **Create repository**  
 
 ### 2. Upload source code
+
 #### Cách 1: Dùng giao diện web
 - Vào repository → **Upload files**
 - Kéo thả toàn bộ file vào
@@ -58,7 +64,42 @@ Thiết kế hiện đại, responsive, hỗ trợ truy cập trên mọi thiế
 git clone https://github.com/[USERNAME]/dntu-buddies-website.git
 cd dntu-buddies-website
 
-# Copy toàn bộ file vào thư mục
+# Copy toàn bộ file vào thư mục này
 git add .
 git commit -m "Initial website files"
 git push origin main
+3. Kích hoạt GitHub Pages (HTTPS miễn phí)
+Vào tab Settings → Pages
+
+Trong "Source", chọn Deploy from a branch
+
+Branch: main, Folder: / (root)
+
+Nhấn Save
+
+Chờ vài phút, website sẽ xuất hiện tại:
+
+arduino
+Sao chép
+Chỉnh sửa
+https://[USERNAME].github.io/dntu-buddies-website/
+📱 Hướng dẫn sử dụng
+Đăng ký tài khoản: /register.html
+
+Email: phải có đuôi @dntu.edu.vn
+
+Mã sinh viên: 10 chữ số
+
+Đăng nhập: /login.html
+
+Quản lý thành viên: /members.html
+
+Thêm thành viên: /add-member.html
+
+Demo Account
+
+makefile
+Sao chép
+Chỉnh sửa
+Email: test@dntu.edu.vn
+Password: password123

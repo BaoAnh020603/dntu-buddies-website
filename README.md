@@ -18,7 +18,7 @@ Thiết kế hiện đại, responsive, hỗ trợ truy cập trên mọi thiế
 ---
 
 ## 📁 Cấu trúc thư mục
-DNTU-Buddies-Website/
+```DNTU-Buddies-Website/
 ├── index.html # Trang chủ
 ├── login.html # Trang đăng nhập
 ├── register.html # Trang đăng ký
@@ -33,10 +33,6 @@ DNTU-Buddies-Website/
 ├── members.js # JS cho quản lý thành viên
 ├── add-member.js # JS cho form thêm thành viên
 └── README.md # Tài liệu hướng dẫn
-
-markdown
-Sao chép
-Chỉnh sửa
 
 ---
 

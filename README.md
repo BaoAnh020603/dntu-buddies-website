@@ -18,8 +18,9 @@ Thiết kế hiện đại, responsive, hỗ trợ truy cập trên mọi thiế
 ---
 
 ## 📁 Cấu trúc thư mục
-```
 ```DNTU-Buddies-Website/
+```
+```
 ├── index.html # Trang chủ
 ├── login.html # Trang đăng nhập
 ├── register.html # Trang đăng ký
@@ -63,6 +64,7 @@ cd dntu-buddies-website
 git add .
 git commit -m "Initial website files"
 git push origin main
+```
 3. Kích hoạt GitHub Pages (HTTPS miễn phí)
 Vào tab Settings → Pages
 
@@ -89,9 +91,9 @@ Mã sinh viên: 10 chữ số
 Quản lý thành viên: /members.html
 
 Thêm thành viên: /add-member.html
-```
+
 ```Demo Account
 ```
-
+```
 Email: test@dntu.edu.vn
 Password: password123

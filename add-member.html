@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm thành viên mới - DNTU Buddies Team</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="add-member.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <img src="https://via.placeholder.com/50x50/4a90e2/ffffff?text=DB" alt="DNTU Buddies Logo" class="logo">
+                    <span class="brand-text">DNTU Buddies</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+                    <li><a href="index.html#about" class="nav-link">Giới thiệu</a></li>
+                    <li><a href="index.html#news" class="nav-link">Bảng tin</a></li>
+                    <li><a href="members.html" class="nav-link">Thành viên</a></li>
+                    <li><a href="index.html#activities" class="nav-link">Hoạt động</a></li>
+                </ul>
+                <div class="nav-auth">
+                    <a href="members.html" class="btn btn-outline">
+                        <i class="fas fa-arrow-left"></i>
+                        Quay lại
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Add Member Form -->
+    <section class="add-member-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <nav class="breadcrumb">
+                        <a href="index.html">Trang chủ</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <a href="members.html">Thành viên</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <span>Thêm mới</span>
+                    </nav>
+                    <h1 class="form-title">Thêm thành viên mới</h1>
+                    <p class="form-subtitle">Điền thông tin chi tiết để thêm thành viên mới vào CLB DNTU Buddies Team</p>
+                </div>
+
+                <form class="member-form" id="addMemberForm">
+                    <!-- Personal Information -->
+                    <div class="form-section">
+                        <h3 class="section-title">
+                            <i class="fas fa-user"></i>
+                            Thông tin cá nhân
+                        </h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="lastName" class="required">Họ</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Ví dụ: Nguyễn" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="firstName" class="required">Tên</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Ví dụ: Văn A" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" class="required">Email</label>
+                                <input type="email" id="email" name="email" placeholder="example@dntu.edu.vn" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="required">Số điện thoại</label>
+                                <input type="tel" id="phone" name="phone" placeholder="0123456789" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="birthday">Ngày sinh</label>
+                                <input type="date" id="birthday" name="birthday">
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Giới tính</label>
+                                <select id="gender" name="gender">
+                                    <option value="">Chọn giới tính</option>
+                                    <option value="male">Nam</option>
+                                    <option value="female">Nữ</option>
+                                    <option value="other">Khác</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Địa chỉ</label>
+                            <textarea id="address" name="address" placeholder="Nhập địa chỉ đầy đủ" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Academic Information -->
+                    <div class="form-section">
+                        <h3 class="section-title">
+                            <i class="fas fa-graduation-cap"></i>
+                            Thông tin học tập
+                        </h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="studentId" class="required">Mã số sinh viên</label>
+                                <input type="text" id="studentId" name="studentId" placeholder="Ví dụ: 2021001234" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="faculty" class="required">Khoa</label>
+                                <select id="faculty" name="faculty" required>
+                                    <option value="">Chọn khoa</option>
+                                    <option value="cntt">Công nghệ thông tin</option>
+                                    <option value="ngoaingu">Ngoại ngữ</option>
+                                    <option value="kinhtequocte">Kinh tế quốc tế</option>
+                                    <option value="quantrikiemtoan">Quản trị - Kiểm toán</option>
+                                    <option value="cokhi">Cơ khí</option>
+                                    <option value="xaydung">Xây dựng</option>
+                                    <option value="other">Khác</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="major">Chuyên ngành</label>
+                                <input type="text" id="major" name="major" placeholder="Ví dụ: Công nghệ phần mềm">
+                            </div>
+                            <div class="form-group">
+                                <label for="academicYear" class="required">Năm học</label>
+                                <select id="academicYear" name="academicYear" required>
+                                    <option value="">Chọn năm học</option>
+                                    <option value="1">Năm 1</option>
+                                    <option value="2">Năm 2</option>
+                                    <option value="3">Năm 3</option>
+                                    <option value="4">Năm 4</option>
+                                    <option value="5">Năm 5</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gpa">GPA</label>
+                            <input type="number" id="gpa" name="gpa" placeholder="3.5" step="0.01" min="0" max="4">
+                        </div>
+                    </div>
+
+                    <!-- Club Information -->
+                    <div class="form-section">
+                        <h3 class="section-title">
+                            <i class="fas fa-users"></i>
+                            Thông tin CLB
+                        </h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="role" class="required">Vai trò</label>
+                                    <option value="thanhvien">Thành viên</option>
+                                    <option value="thuky">Thư ký</option>
+                                    <option value="thutruong">Thủ trưởng</option>
+                                    <option value="phochutichu">Phó chủ tịch</option>
+                                    <option value="chutichu">Chủ tịch</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="joinDate" class="required">Ngày tham gia</label>
+                                <input type="date" id="joinDate" name="joinDate" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="department">Bộ phận</label>
+                            <select id="department" name="department">
+                                <option value="">Chọn bộ phận</option>
+                                <option value="hanhchinh">Hành chính</option>
+                                <option value="sukien">Sự kiện</option>
+                                <option value="truyenthong">Truyền thông</option>
+                                <option value="ngoaiviec">Đối ngoại</option>
+                                <option value="taichính">Tài chính</option>
+                                <option value="nhansu">Nhân sự</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="motivation">Động lực tham gia CLB</label>
+                            <textarea id="motivation" name="motivation" placeholder="Chia sẻ lý do tham gia CLB và mục tiêu cá nhân..." rows="4"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Skills & Languages -->
+                    <div class="form-section">
+                        <h3 class="section-title">
+                            <i class="fas fa-star"></i>
+                            Kỹ năng & Ngôn ngữ
+                        </h3>
+                        
+                        <div class="form-group">
+                            <label for="languages">Ngôn ngữ</label>
+                            <div class="language-skills">
+                                <div class="language-item">
+                                    <label class="language-label">
+                                        <input type="checkbox" name="languages" value="english">
+                                        <span>Tiếng Anh</span>
+                                    </label>
+                                    <select name="englishLevel" class="skill-level" disabled>
+                                        <option value="basic">Cơ bản</option>
+                                        <option value="intermediate">Trung cấp</option>
+                                        <option value="advanced">Nâng cao</option>
+                                        <option value="native">Bản ngữ</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="language-item">
+                                    <label class="language-label">
+                                        <input type="checkbox" name="languages" value="japanese">
+                                        <span>Tiếng Nhật</span>
+                                    </label>
+                                    <select name="japaneseLevel" class="skill-level" disabled>
+                                        <option value="basic">Cơ bản</option>
+                                        <option value="intermediate">Trung cấp</option>
+                                        <option value="advanced">Nâng cao</option>
+                                        <option value="native">Bản ngữ</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="language-item">
+                                    <label class="language-label">
+                                        <input type="checkbox" name="languages" value="korean">
+                                        <span>Tiếng Hàn</span>
+                                    </label>
+                                    <select name="koreanLevel" class="skill-level" disabled>
+                                        <option value="basic">Cơ bản</option>
+                                        <option value="intermediate">Trung cấp</option>
+                                        <option value="advanced">Nâng cao</option>
+                                        <option value="native">Bản ngữ</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="language-item">
+                                    <label class="language-label">
+                                        <input type="checkbox" name="languages" value="chinese">
+                                        <span>Tiếng Trung</span>
+                                    </label>
+                                    <select name="chineseLevel" class="skill-level" disabled>
+                                        <option value="basic">Cơ bản</option>
+                                        <option value="intermediate">Trung cấp</option>
+                                        <option value="advanced">Nâng cao</option>
+                                        <option value="native">Bản ngữ</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="skills">Kỹ năng chuyên môn</label>
+                            <div class="skills-input">
+                                <input type="text" id="skillInput" placeholder="Nhập kỹ năng và nhấn Enter">
+                                <div class="skills-tags" id="skillsTags"></div>
+                                <input type="hidden" id="skills" name="skills">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hobbies">Sở thích</label>
+                            <textarea id="hobbies" name="hobbies" placeholder="Chia sẻ sở thích của bạn..." rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Profile Image -->
+                    <div class="form-section">
+                        <h3 class="section-title">
+                            <i class="fas fa-camera"></i>
+                            Ảnh đại diện
+                        </h3>
+                        
+                        <div class="image-upload">
+                            <div class="image-preview" id="imagePreview">
+                                <i class="fas fa-user"></i>
+                                <span>Chưa có ảnh</span>
+                            </div>
+                            <div class="upload-controls">
+                                <input type="file" id="profileImage" name="profileImage" accept="image/*" hidden>
+                                <button type="button" class="upload-btn" onclick="document.getElementById('profileImage').click()">
+                                    <i class="fas fa-upload"></i>
+                                    Chọn ảnh
+                                </button>
+                                <button type="button" class="remove-btn" id="removeImage" style="display: none;">
+                                    <i class="fas fa-trash"></i>
+                                    Xóa ảnh
+                                </button>
+                            </div>
+                            <p class="upload-note">Định dạng: JPG, PNG. Kích thước tối đa: 2MB</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="form-section">
+                        <h3 class="section-title">
+                            <i class="fas fa-share-alt"></i>
+                            Liên kết mạng xã hội
+                        </h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="facebook">Facebook</label>
+                                <div class="social-input">
+                                    <i class="fab fa-facebook"></i>
+                                    <input type="url" id="facebook" name="facebook" placeholder="https://facebook.com/username">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="instagram">Instagram</label>
+                                <div class="social-input">
+                                    <i class="fab fa-instagram"></i>
+                                    <input type="url" id="instagram" name="instagram" placeholder="https://instagram.com/username">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="linkedin">LinkedIn</label>
+                                <div class="social-input">
+                                    <i class="fab fa-linkedin"></i>
+                                    <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/username">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="github">GitHub</label>
+                                <div class="social-input">
+                                    <i class="fab fa-github"></i>
+                                    <input type="url" id="github" name="github" placeholder="https://github.com/username">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="form-section">
+                        <h3 class="section-title">
+                            <i class="fas fa-info-circle"></i>
+                            Thông tin bổ sung
+                        </h3>
+                        
+                        <div class="form-group">
+                            <label for="experience">Kinh nghiệm liên quan</label>
+                            <textarea id="experience" name="experience" placeholder="Mô tả kinh nghiệm làm việc, tham gia CLB, tổ chức sự kiện..." rows="4"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="achievements">Thành tích nổi bật</label>
+                            <textarea id="achievements" name="achievements" placeholder="Các giải thưởng, chứng chỉ, thành tích học tập..." rows="3"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="goals">Mục tiêu trong CLB</label>
+                            <textarea id="goals" name="goals" placeholder="Mục tiêu cá nhân khi tham gia CLB, định hướng phát triển..." rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Agreement -->
+                    <div class="form-section">
+                        <div class="agreement-section">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" name="dataAgreement" required>
+                                <span class="checkmark"></span>
+                                <span>Tôi đồng ý cho CLB sử dụng thông tin cá nhân này để quản lý thành viên và tổ chức các hoạt động của CLB</span>
+                            </label>
+                            
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" name="rulesAgreement" required>
+                                <span class="checkmark"></span>
+                                <span>Tôi cam kết tuân thủ các quy định và nội quy của CLB DNTU Buddies Team</span>
+                            </label>
+                            
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" name="activityAgreement">
+                                <span class="checkmark"></span>
+                                <span>Tôi sẵn sàng tích cực tham gia các hoạt động và sự kiện của CLB</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Form Actions -->
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-outline" onclick="resetForm()">
+                            <i class="fas fa-undo"></i>
+                            Đặt lại
+                        </button>
+                        <button type="button" class="btn btn-secondary" onclick="saveDraft()">
+                            <i class="fas fa-save"></i>
+                            Lưu nháp
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-plus"></i>
+                            Thêm thành viên
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="https://via.placeholder.com/40x40/4a90e2/ffffff?text=DB" alt="DNTU Buddies Logo" class="footer-logo">
+                    <div>
+                        <h4>DNTU Buddies Team</h4>
+                        <p>Buddies Beyond Boundaries – Gắn kết không giới hạn!</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 DNTU Buddies Team. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="add-member.js"></script>
+</body>
+</html>

@@ -18,4 +18,51 @@ Thiết kế hiện đại, responsive, hỗ trợ truy cập trên mọi thiế
 ---
 
 ## 📁 Cấu trúc thư mục
+DNTU-Buddies-Website/
+├── index.html # Trang chủ
+├── login.html # Trang đăng nhập
+├── register.html # Trang đăng ký
+├── members.html # Danh sách thành viên
+├── add-member.html # Thêm thành viên mới
+├── styles.css # CSS chính
+├── auth.css # CSS cho đăng nhập/đăng ký
+├── members.css # CSS cho trang thành viên
+├── add-member.css # CSS cho form thêm thành viên
+├── script.js # JavaScript chính
+├── auth.js # JS cho xác thực
+├── members.js # JS cho quản lý thành viên
+├── add-member.js # JS cho form thêm thành viên
+└── README.md # Tài liệu hướng dẫn
 
+markdown
+Sao chép
+Chỉnh sửa
+
+---
+
+## 🛠 Cài đặt & Triển khai trên GitHub Pages
+
+### 1. Tạo Repository trên GitHub
+1. Đăng nhập GitHub  
+2. Nhấn **New repository**  
+3. Đặt tên: `dntu-buddies-website`  
+4. Chọn **Public**  
+5. Tích **Add a README file**  
+6. Nhấn **Create repository**  
+
+### 2. Upload source code
+#### Cách 1: Dùng giao diện web
+- Vào repository → **Upload files**
+- Kéo thả toàn bộ file vào
+- Commit với nội dung: `Initial website files`
+
+#### Cách 2: Dùng Git CLI
+```bash
+# Clone repository
+git clone https://github.com/[USERNAME]/dntu-buddies-website.git
+cd dntu-buddies-website
+
+# Copy toàn bộ file vào thư mục
+git add .
+git commit -m "Initial website files"
+git push origin main
